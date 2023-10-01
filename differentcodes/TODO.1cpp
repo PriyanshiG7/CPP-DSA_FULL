@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main(){
+
+todo =[];
+let req=prompt("please enter your request");
+while (true){
+    if(req=="quit"){
+        cout<<("quitting app");
+        break;
+    }
+    if (req=="list"){
+        cout<<("---------");
+        for(let i=0; i<todo.length ;i++){
+            cout<<(i,todo[i]);
+        }
+        cout<<("--------");
+    }else if(req=="add"){
+        let task = cin>>("please enter the task you want to add");
+        todo.push(task);
+        cout<<("task added");
+    }else if (req=="delete"){
+        let idx = cin>>("please enter the task index")
+        todo.splice(idx,1);
+        cout<<("task deleted");
+    }else{
+        cout<<("wrong request");
+    }
+    req=cin>>("please enter your next request");
+}
+
+}
